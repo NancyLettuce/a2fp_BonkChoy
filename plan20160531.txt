@@ -1,4 +1,4 @@
-Steps to take: 
+Steps to take (in order): 
 1. Rough draft (JL, NL, AL) : We will build our world around this. This is a prerequisite for everything else.
       -story
       -layout
@@ -17,4 +17,6 @@ Steps to take:
 6. Sound Effects???
 
 *Because our project is so graphics-oriented, mastering processing is one of our top priorities.
+
+If we run low on time, we will cut back on some of the detail to focus on algorithms. 
 
