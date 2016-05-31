@@ -1,1 +1,10 @@
-
+1. Basic Room
+      -test extent of processing possibility
+      -Sprites/animation (maybe)
+3. Setup Skeleton
+      -inventory slots
+      -Routes. Build world
+      -Interaction of elements
+4. Make puzzles
+      -Creativity???
+5. Animation
