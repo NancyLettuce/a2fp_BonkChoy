@@ -1,0 +1,11 @@
+Escape the Room Game
+	A Stuyvesant student is locked in their room with no food after failing APCS. They must prove their worth and escape from their house in order to avoid dying of thirst and starvation. We will focus on the algorithms learned this term by incorporating them into the puzzles the player will need to solve. We will use stacks and linked lists as a way of dispensing certain clues. They also help with keeping track of the steps needed to escape the room. We will use an array to keep inventory of the tools picked up along the way.
+
+	2D Array - Board
+	Binary Tree - Progression
+		-Details
+		-Sublevels for story progression.
+	Stacks for Hints/ Linked List
+	Array for Inventory
+	Story
+	Backtracking- Go up binary tree
