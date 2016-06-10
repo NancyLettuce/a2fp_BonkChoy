@@ -9,9 +9,10 @@ Nancy Lee, Andrew Lin, Jongyoul Lee
 |  NL, AL,JL  | 6/03     |  Drew flowchart                               |
 |             |          |  Began basic room                             |
 |             |          |  Planned layout of game                       |
-|             |          |                                               |
-|             |          |                                               |
-|             |          |                                               |
+|  NL, AL,JL  | 6/07     |  Worked on puzzles                            |
+|  NL         | 6/08     |  Set up basic heirarchy                       |
+|             |          |  Worked on Puzzles                            |
+|  AL         | 6/08     |  puzzles                                      |
 |             |          |                                               |
 |             |          |                                               |
 |             |          |                                               |
