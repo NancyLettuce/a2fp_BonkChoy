@@ -9,7 +9,13 @@ class Bedroom extends Room{
   }
   
   public void draw() {
-    popup("Bed");
+    String object = "Bed";//placeholder
+    if ( isFound(object) == true ) {
+      popup(object);
+    }
+    else {
+      System.out.println("hi");//placeholder
+    }
   }
   
   public void play() {
