@@ -19,14 +19,14 @@ class Room {
     if (pass == null) {
       pane.getRootFrame().dispose();  
     }
-    else if ("".equals(pass)) {
+    else if ("".equals(pass)) {//if nothing entered
       pane.getRootFrame().dispose(); 
     }
-    else if ( code.get(obj).equals(pass) ) {
+    else if ( code.get(obj).equals(pass) ) {//if matched key to value
       pane.showMessageDialog(null, "Correct Code.", "Info", pane.INFORMATION_MESSAGE);
       pane.getRootFrame().dispose();
     }
-    else {
+    else {//when press cancel
       pane.getRootFrame().dispose();
     }
   }
