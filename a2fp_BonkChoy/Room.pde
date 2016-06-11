@@ -31,4 +31,18 @@ class Room {
     }
   }
   
+  public boolean isFound(String obj) {
+    ArrayList<String> names = new ArrayList<String>();
+    for (String key: code.keySet()) {
+      names.add(key);
+    }
+    for (int ctr = 0; ctr < names.size(); ctr ++) {
+      if ( obj.equals( names.get(ctr)) ) {
+      //if the object is one that needs password input
+        return true;
+      }
+    }
+    return false;
+  }
+  
 }
