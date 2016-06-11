@@ -4,5 +4,11 @@ class Bedroom extends Room{
     story = "";
     pass = false;
   }
+  
+  public void play() {
+    while (pass == false) {
+    }
+    { }
+  }
    
 }
