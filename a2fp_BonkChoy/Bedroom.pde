@@ -1,3 +1,5 @@
+import javax.swing.JOptionPane;
+
 class Bedroom extends Room{
   
   public Bedroom() {
@@ -9,6 +11,7 @@ class Bedroom extends Room{
   public void draw() {
     popup("Bed");
   }
+  
   public void play() {
     while (pass == false) {
         if (mouseClicked && mouseX == 
