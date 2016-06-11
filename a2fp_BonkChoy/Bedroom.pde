@@ -7,6 +7,7 @@ class Bedroom extends Room{
   
   public void play() {
     while (pass == false) {
+        if (mouseClicked && mouseX == 
     }
     { }
   }
