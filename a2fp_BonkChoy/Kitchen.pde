@@ -17,8 +17,8 @@ class Kitchen extends Room{
       }
       else {
         addInventory(currObj);
-      }
-    }
+      }//end else
+    }//keyExist
   }
    
 }
