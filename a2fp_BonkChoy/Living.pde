@@ -17,8 +17,10 @@ class Living extends Room{
       }
       else {
         addInventory(currObj);
-      }
-    }
+        if (inInventory(currObj) == true) {
+        }
+      }//else
+    }//keyExist
   }
    
 }
