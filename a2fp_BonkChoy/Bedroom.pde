@@ -6,8 +6,10 @@ class Bedroom extends Room{
     story = "";
     room = "Bedroom";
     success = "";
-    code.put("Bed", "123");//placeholder
-    sObj.put("0,200,0,200", "Bed");//placeholder
+    inventory.clear();//clears inventory for each level
+    code.put("Door", "brandy");//placeholder
+    sObj.put("0,200,0,200", "Door");//placeholder
+    sObj.put("200,400,200,400", "Note");//placeholder
   }
   
   public void draw() {
