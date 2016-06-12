@@ -1,0 +1,17 @@
+1. Record range for special objects
+  -access x & y coordinates then use its height and width to calculate range
+2. Turn coordinates into string in specified format
+  "x,x1,y,y1" 
+  x < x1
+  y < y1
+3. Add this into SObj hashmap
+  coord : obj name
+
+
+The name in the inventory matches :
+  -currObj
+  -the name of obj in sObj hashmap
+Use this information to access data as necessary 
+
+Come up with some puzzles and room plots guys
+pls
