@@ -16,7 +16,7 @@ class Bedroom extends Room{
         popup(currObj, room);
       }
       else {
-        System.out.println("hi");//placeholder
+        addInventory(currObj);
       }
     }
   }
