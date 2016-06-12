@@ -91,10 +91,12 @@ class Room {
       int x1 = Integer.parseInt(subKey[1]);
       int y = Integer.parseInt(subKey[2]);
       int y1 = Integer.parseInt(subKey[3]);
-      if (mouseX > x && mouseX < x1 && mouseY > y && mouseY < y1) {
-        String need = keys.get(i);//the coordinates of our object
-        currObj = sObj.get(need);//use coordinates to get value/name of object
-        return true;
+      if (mousePressed) {
+        if (mouseX > x && mouseX < x1 && mouseY > y && mouseY < y1) {
+          String need = keys.get(i);//the coordinates of our object
+          currObj = sObj.get(need);//use coordinates to get value/name of object
+          return true;
+        }
       }
     }
     return false;
