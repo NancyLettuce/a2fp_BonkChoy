@@ -14,5 +14,5 @@ Nancy Lee, Andrew Lin, Jongyoul Lee
 |             |          |  Worked on Puzzles                            |
 |  AL         | 6/08     |  puzzles                                      |
 |  JL         | 6/11     |  Upload pics of letters                       |
-|             |          |                                               |
+|  JL         | 6/12     |  Draw sprites                                 |
 |             |          |                                               |
