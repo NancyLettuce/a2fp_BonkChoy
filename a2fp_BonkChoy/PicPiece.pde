@@ -5,16 +5,17 @@ class PicPiece {
   private int Y_cor;
   private boolean hasPiece;
   
-  public PicPiece(int num, int x, int y) {
+  public PicPiece(int num, int x, int y, boolean a) {
     _pieceNum = num;
     X_cor = x;
     Y_cor = y;
+    hasPiece = a;
   }
   
   public int getNum() {return _pieceNum;}
   public int getX() {return X_cor;}
   public int getY() {return Y_cor;}
-  public boolean getHasPiece {return hasPiece;}
+  public boolean getHasPiece() {return hasPiece;}
   
   public void setX(int x) {X_cor = x;}
   public void setY(int y) {Y_cor = y;}
