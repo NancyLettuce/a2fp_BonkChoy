@@ -18,6 +18,9 @@ class Room {
   protected String room;//which room you are in
   protected String success;//room you recently passed
   
+  protected int invX;//coordinates for object moved into inventory
+  protected int invY;
+  
   void draw() {
     rect(20,30,100,100);
   }
@@ -71,6 +74,16 @@ class Room {
   public void moveInventory(String obj) {
   }
   
+    
+  //is this object in the iventory???
+  public boolean inInventory(String obj) {
+    for (String x : inventory) {
+      if (x.equals(obj)) {
+        return true;
+      }
+    }
+    return false;
+  }
   
   public String getKeyFromVal( Map<String,String> map, String val) {
     for ( String s : map.keySet() ) {
