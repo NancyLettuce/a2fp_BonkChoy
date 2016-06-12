@@ -4,7 +4,8 @@ import javax.swing.JOptionPane;
 
 class Room {
   
-  protected Map<String, String> sObj = new HashMap<String, String>();//special obj and coord
+  //key written as "x,x1,y,y1"
+  protected Map<String, String> sObj = new HashMap<String, String>();//special obj and coord 
   protected Map<String, String> obj = new HashMap<String, String>();//obj and coord
   protected String story;//storyline
   protected boolean pass;//level passed
