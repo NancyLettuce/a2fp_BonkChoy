@@ -30,17 +30,40 @@ class Bedroom extends Room{
   }
   
   public void draw() {
-    rand.display(600,600);
+    image(note0, 850, 450);
+    image(note1, 600, 380);
+    image(note5, 210,210);
+    //rand.display(600,600);
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
         popup(currObj, room);
       }
       else {
-        if (addInventory(currObj) == true) {
-          rand.display(invX,invY);
+        addInventory(currObj);
+        if (inInventory(currObj) == true) {
+          moveInventory();
+          if ( currObj.equals("note0") ) {
+            image(note0, invX, invY);
+          }
+          else if ( currObj.equals("note1") ) {
+            image(note1, invX, invY);
+          }
+          else if ( currObj.equals("note2") ) {
+            image(note2, invX, invY);
+            image(note2, 410, 260);
+          }
+          else if ( currObj.equals("note3") ) {
+            image(note3, invX, invY);
+          }
+          else if ( currObj.equals("note4") ) {
+            image(note4, invX, invY);
+          }
+           else if ( currObj.equals("note5") ) {
+            image(note5, invX, invY);
+          }
         }
-      }
-    }
+      }//end else
+    }keyExist
   }
   
   
