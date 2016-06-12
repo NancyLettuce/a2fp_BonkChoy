@@ -33,14 +33,4 @@ class Bedroom extends Room{
   public void puzzle1() {
     if (mouseClicked() 
   }
-   
-  public boolean KeyExist? () {
-    String[] keys = sObj.keySet().toArray();
-    for (int i = 0; i < keys.length; i++) {
-      String[] subKey = keys[i].split(",");
-      if (mouseX < subKey[0] && mouseX > subKey[1] && mouseY < subKey[2] && mouseY > subKey[3])
-        {return true;}
-    }
-    return false;
-  }
 }
