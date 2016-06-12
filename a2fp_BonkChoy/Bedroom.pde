@@ -6,6 +6,7 @@ class Bedroom extends Room{
     story = "";
     room = "Bedroom";
     success = "";
+    inventory = new ArrayList<String>();
     inventory.clear();//clears inventory for each level
     code.put("Door", "brandy");//placeholder
     sObj.put("0,200,0,200", "Door");//placeholder
