@@ -3,6 +3,9 @@ public class Animation {
   int amount;
   int frame;
   
+  int xcor;//store coord of sprite
+  int ycor;
+  
   public Animation(String[] images, int count, int wide) {
     amount = count;
     sprites = new PImage[amount];
@@ -13,6 +16,8 @@ public class Animation {
   }
 
   void display(int xpos, int ypos) {
+    xcor = xpos;//stores coordinates of sprite
+    ycor = ypos;
     frame = (frame+1) % amount;
     image(sprites[frame], xpos, ypos);
   }
