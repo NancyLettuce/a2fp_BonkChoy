@@ -6,15 +6,17 @@ class Bedroom extends Room{
     story = "";
     pass = false;
     code.put("Bed", "123");//placeholder
+    sObj.put("0,200,0,200", "Bed");//placeholder
   }
   
   public void draw() {
-    String object = "Bed";//placeholder
-    if ( isFound(object) == true ) {
-      popup(object);
-    }
-    else {
-      System.out.println("hi");//placeholder
+    if ( KeyExist() == true ) {
+      if ( isFound(currObj) == true ) {
+        popup(currObj);
+      }
+      else {
+        System.out.println("hi");//placeholder
+      }
     }
   }
   
