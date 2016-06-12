@@ -5,10 +5,13 @@ import javax.swing.JOptionPane;
 class Room {
   
   //key written as "x,x1,y,y1"
-  protected Map<String, String> sObj = new HashMap<String, String>();//special obj and coord 
-  protected Map<String, String> obj = new HashMap<String, String>();//obj and coord
+  protected Map<String, String> sObj = new HashMap<String, String>();//coord , special obj
+  protected Map<String, String> obj = new HashMap<String, String>();//obj , coord
+  protected Map<String, String> code = new HashMap<String, String>();//special obj , required password
   protected String story;//storyline
   protected boolean pass;//level passed
+  
+  protected String currObj;//object you are clicking on
   
   void draw() {
     rect(20,30,100,100);
@@ -48,6 +51,7 @@ class Room {
   }
   
   //Is the object you clicked on special???
+  //preserves it for use in other cases
   public boolean KeyExist() {
     ArrayList<String> keys= new ArrayList<String>();
     for (String key: sObj.keySet()) {
@@ -59,8 +63,11 @@ class Room {
       int x1 = Integer.parseInt(subKey[1]);
       int y = Integer.parseInt(subKey[2]);
       int y1 = Integer.parseInt(subKey[3]);
-      if (mouseX < x && mouseX > x1 && mouseY < y && mouseY > y1)
-        {return true;}
+      if (mouseX < x && mouseX > x1 && mouseY < y && mouseY > y1) {
+        String need = keys.get(i);//the coordinates of our object
+        currObj = sObj.get(need);//use coordinates to get value/name of object
+        return true;
+      }
     }
     return false;
   }
