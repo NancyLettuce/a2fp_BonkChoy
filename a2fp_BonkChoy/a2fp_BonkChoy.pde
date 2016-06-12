@@ -17,6 +17,8 @@ void setup() {
   
   kitchen = loadImage("bedroom.jpg");//placeholder
   kitchen.resize(0, 600);
+  
+  bed.rand = new Animation(bed.hi.sprites, 4, 20);//sample sprite
 }
 
 void draw() {
