@@ -4,12 +4,14 @@ class PicPiece {
   private int X_cor;
   private int Y_cor;
   private boolean hasPiece;
+  private color c;
   
-  public PicPiece(int num, int x, int y, boolean a) {
+  public PicPiece(int num, int x, int y, boolean a, color C) {
     _pieceNum = num;
     X_cor = x;
     Y_cor = y;
     hasPiece = a;
+    c = C;
   }
   
   public int getNum() {return _pieceNum;}
