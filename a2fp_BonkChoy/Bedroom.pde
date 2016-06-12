@@ -29,6 +29,10 @@ class Bedroom extends Room{
     System.outprintln ("Level Completed")
     { }
   }
+  
+  public void puzzle1() {
+    if (mouseClicked() 
+  }
    
   public boolean KeyExist? () {
     String[] keys = sObj.keySet().toArray();
