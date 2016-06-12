@@ -6,18 +6,19 @@ class Room {
   
   //key written as "x,x1,y,y1"
   protected Map<String, String> sObj = new HashMap<String, String>();//coord , special obj
-  protected Map<String, String> obj = new HashMap<String, String>();//obj , coord
   protected Map<String, String> code = new HashMap<String, String>();//special obj , required password
   protected String story;//storyline
-  protected boolean pass;//level passed
   
   protected String currObj;//object you are clicking on
+  protected String finalPass;//door leading to next room
+  protected String room;//which room you are in
+  protected String success;//room you recently passed
   
   void draw() {
     rect(20,30,100,100);
   }
   
-  public void popup(String obj) {
+  public void popup(String obj, String room) {
     JOptionPane pane= new JOptionPane("message", JOptionPane.OK_CANCEL_OPTION);
     final String pass = pane.showInputDialog("Please enter the correct code.");
     if (pass == null) {
@@ -27,6 +28,9 @@ class Room {
       pane.getRootFrame().setVisible(false);
     }
     else if ( code.get(obj).equals( pass.toLowerCase() ) ) {//if matched key to value
+      if ( obj.equals(finalPass) ) {//if you unlocked final door
+        success = room;//you passed level
+      }
       pane.showMessageDialog(null, "Correct Code.", "Info", pane.INFORMATION_MESSAGE);
       pane.getRootFrame().dispose();
     }
