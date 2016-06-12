@@ -2,7 +2,7 @@ class PicPiece {
   
   private int _pieceNum;
   private int X_cor;
-  private Y_cor;
+  private int Y_cor;
   
   public PicPiece(int num, int x, int y) {
     _pieceNum = num;
