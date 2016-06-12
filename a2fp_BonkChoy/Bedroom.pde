@@ -4,7 +4,8 @@ class Bedroom extends Room{
   
   public Bedroom() {
     story = "";
-    pass = false;
+    room = "Bedroom";
+    success = "";
     code.put("Bed", "123");//placeholder
     sObj.put("0,200,0,200", "Bed");//placeholder
   }
@@ -12,7 +13,7 @@ class Bedroom extends Room{
   public void draw() {
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
-        popup(currObj);
+        popup(currObj, room);
       }
       else {
         System.out.println("hi");//placeholder
