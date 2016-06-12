@@ -1,6 +1,9 @@
 import javax.swing.JOptionPane;
 
 class Bedroom extends Room{
+
+  Sprite hi = new Sprite();
+  Animation rand;
   
   public Bedroom() {
     story = "";
@@ -14,12 +17,15 @@ class Bedroom extends Room{
   }
   
   public void draw() {
+    rand.display(600,600);
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
         popup(currObj, room);
       }
       else {
-        addInventory(currObj);
+        if (addInventory(currObj) == true) {
+          rand.display(invX,invY);
+        }
       }
     }
   }
