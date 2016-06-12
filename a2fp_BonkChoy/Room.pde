@@ -50,17 +50,34 @@ class Room {
   }
   
     //popup asking whether or not to add to inventory
-  public void addInventory(String obj) {
+  public boolean addInventory(String obj) {
     inventory = new ArrayList<String>();
     JOptionPane pane= new JOptionPane("message", JOptionPane.YES_NO_OPTION);
     final int choose = pane.showConfirmDialog(null, "Do you want to add " + obj + " to the inventory?");
     if (choose == pane.YES_OPTION){
       inventory.add(obj);
-      pane.getRootFrame().dispose();
+      String rem = getKeyFromVal(sObj, obj);//coords of special obj
+      sObj.remove( rem );//removes it from sObj
+      pane.getRootFrame().setVisible(false);
+      return true;
     }
     else {
       pane.getRootFrame().setVisible(false);
+      return false
     }    
+  }
+  ///////////////////////////////////////THISSSSS//////////////////
+  public void moveInventory(String obj) {
+  }
+  
+  
+  public String getKeyFromVal( Map<String,String> map, String val) {
+    for ( String s : map.keySet() ) {
+      if ( map.get(s).equals(val)) {
+        return s;
+      }
+    }
+    return null;
   }
   
   //Is the object you clicked on protected by code????
