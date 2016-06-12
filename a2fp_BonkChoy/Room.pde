@@ -21,17 +21,21 @@ class Room {
     JOptionPane pane= new JOptionPane("message", JOptionPane.OK_CANCEL_OPTION);
     final String pass = pane.showInputDialog("Please enter the correct code.");
     if (pass == null) {
-      pane.getRootFrame().dispose();  
+      pane.getRootFrame().setVisible(false); 
     }
     else if ("".equals(pass)) {//if nothing entered
-      pane.getRootFrame().dispose(); 
+      pane.getRootFrame().setVisible(false);
     }
     else if ( code.get(obj).equals( pass.toLowerCase() ) ) {//if matched key to value
       pane.showMessageDialog(null, "Correct Code.", "Info", pane.INFORMATION_MESSAGE);
       pane.getRootFrame().dispose();
     }
+    else if ( code.get(obj).equals( pass.toLowerCase()) == false) {//entered wrong code
+      pane.showMessageDialog(null, "Incorrect Code.", "Info", pane.INFORMATION_MESSAGE);
+      pane.getRootFrame().setVisible(false);
+    }
     else {//when press cancel
-      pane.getRootFrame().dispose();
+      pane.getRootFrame().setVisible(false);
     }
   }
   
