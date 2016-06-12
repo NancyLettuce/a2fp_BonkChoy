@@ -70,8 +70,14 @@ class Room {
       return false
     }    
   }
-  ///////////////////////////////////////THISSSSS//////////////////
-  public void moveInventory(String obj) {
+  
+    //changes coordinates of sprite to inventory
+  public void moveInventory(Animation sprite) {
+    invX = 57;
+    invY= 640;
+    for (int c = 1; c < inventory.size(); c ++) {
+      invX += 114;
+    }
   }
   
     
