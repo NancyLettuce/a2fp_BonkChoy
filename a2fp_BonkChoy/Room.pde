@@ -32,6 +32,7 @@ class Room {
     }
   }
   
+  //Does the object you clicked on protected by code????
   public boolean isFound(String obj) {
     ArrayList<String> names = new ArrayList<String>();
     for (String key: code.keySet()) {
@@ -46,4 +47,21 @@ class Room {
     return false;
   }
   
+  //Is the object you clicked on special???
+  public boolean KeyExist() {
+    ArrayList<String> keys= new ArrayList<String>();
+    for (String key: sObj.keySet()) {
+      keys.add(key);
+    }
+    for (int i = 0; i < keys.size(); i++) {
+      String[] subKey =  keys.get(i).split(",");
+      int x = Integer.parseInt(subKey[0]);
+      int x1 = Integer.parseInt(subKey[1]);
+      int y = Integer.parseInt(subKey[2]);
+      int y1 = Integer.parseInt(subKey[3]);
+      if (mouseX < x && mouseX > x1 && mouseY < y && mouseY > y1)
+        {return true;}
+    }
+    return false;
+  }
 }
