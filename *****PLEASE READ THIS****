@@ -1,3 +1,6 @@
+WRITE MOVEINVENTORY METHOD
+YOU CAN FIND IT IN ROOM
+
 1. Record range for special objects
   -access x & y coordinates then use its height and width to calculate range
 2. Turn coordinates into string in specified format
