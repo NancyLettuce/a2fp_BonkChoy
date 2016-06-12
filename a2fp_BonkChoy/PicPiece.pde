@@ -18,6 +18,7 @@ class PicPiece {
   public int getX() {return X_cor;}
   public int getY() {return Y_cor;}
   public boolean getHasPiece() {return hasPiece;}
+  public getColor() {return c;}
   
   public void setX(int x) {X_cor = x;}
   public void setY(int y) {Y_cor = y;}
