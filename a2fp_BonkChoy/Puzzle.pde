@@ -10,10 +10,11 @@ class Puzzle {
   }
   
   public void picPuzzle() { 
-    PicPiece[][] board = new PicPiece[4][4];
+    //600 pixel boardsize
+    PicPiece[][] board = new PicPiece[600][600];
     int counter = 0;
-    for (int i = 0; i < 4; i ++) {
-      for (int j = 0; j < 4; j++) {
+    for (int i = 0; i < 600; i += 150) {
+      for (int j = 0; j < 600; j += 150) {
         if (i == 0 && j == 0) {board[i][j] == new PicPiece(counter, 0, 0, false);}
         board[i][j] = new PicPiece(counter, i, j, true);
         }
@@ -21,22 +22,38 @@ class Puzzle {
     boolean passed = false;
     
     //displayboard;
-    for (int i = 0; i < 4; i ++) {
-      for (int j = 0; j < 4; j++) {
-        stroke (board[i][j].getColor());
+    for (int i = 0; i < 600; i += 150) {
+      for (int j = 0; j < 600; j += 150) {
+        board[i][j].display());
         }
       }
     
     while (passed == false;) {
+      //test to see where the piece has landed.
       if (mouseClicked()) {
-        PicPuzzle a = board[mouseX][mouseY];
+        int x = mouseX;
+        int y = mouseY;
+        PicPiece a = null;
+        for (int i = 0; i < 600; i += 150) {
+          for (int j =  0; j < 600; j += 150) {
+              if (x > board[i][j].getX() && x < board[i][j].getX() + 150 && y > board[i][j].getY() && y < board[i][j].getY() + 150) {
+                a = board[i][j]; }
+          }
+        }
+        
         if (a.getHasPiece() == true;) {
-          if (keyPressed && key == 'w') {a.swap(board[a.getX_cor()][a.getY_cor() + 1]);}
-          if (keyPressed && key == 'd') {a.swap(board[a.getX_cor() + 1][a.getY_cor()]);}
-          if (keyPressed && key == 's') {a.swap(board[a.getX_cor()][a.getY_cor() - 1]);}
-          if (keyPressed && key == 'a') {a.swap(board[a.getX_cor() - 1][a.getY_cor()]);}
+          if (keyPressed && key == 'w' && board[a.getX_cor()][a.getY_cor() + 150].getHasPiece() == false) 
+            {a.swap(board[a.getX_cor()][a.getY_cor() + 150]);}
+          if (keyPressed && key == 'd' && board[a.getX_cor() + 150][a.getY_cor()].getHasPiece() == false) 
+            {a.swap(board[a.getX_cor() + 150][a.getY_cor()]);}
+          if (keyPressed && key == 's' && board[a.getX_cor()][a.getY_cor() - 150].getHasPiece() == false) 
+            {a.swap(board[a.getX_cor()][a.getY_cor() - 150]);}
+          if (keyPressed && key == 'a'&& board[a.getX_cor()-150][a.getY_cor()].getHasPiece() == false) 
+            {a.swap(board[a.getX_cor() - 150][a.getY_cor()]);}
         }
       }
+      
+      //Testing for correct answer
       if {//x_cor and y_cor of all the images; }
     }
   }
