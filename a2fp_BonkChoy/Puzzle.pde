@@ -24,9 +24,14 @@ class Puzzle {
     //displayboard;
     for (int i = 0; i < 600; i += 150) {
       for (int j = 0; j < 600; j += 150) {
-        board[i][j].display());
-        }
+        color g = board[i][j].getColor();
+        for (int a = 0; a < i + 150; a ++) {
+          for (int b = 0; b < j + 150; b ++) {
+            stroke(g)
+          }
+        }    
       }
+    }
     
     while (passed == false;) {
       //test to see where the piece has landed.
