@@ -12,3 +12,4 @@ class puzzle1 {
   public void setY(int y) {Y_cor = y;}
   
 }
+//
