@@ -26,7 +26,7 @@ class Room {
     else if ("".equals(pass)) {//if nothing entered
       pane.getRootFrame().dispose(); 
     }
-    else if ( code.get(obj).toLowerCase().equals(pass) ) {//if matched key to value
+    else if ( code.get(obj).equals( pass.toLowerCase() ) ) {//if matched key to value
       pane.showMessageDialog(null, "Correct Code.", "Info", pane.INFORMATION_MESSAGE);
       pane.getRootFrame().dispose();
     }
