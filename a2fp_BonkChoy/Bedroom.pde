@@ -30,6 +30,7 @@ class Bedroom extends Room{
     }
   }
   
+  /*
   public void play() {
     while (pass == false) {
         if (mouseClicked() && KeyExist?()) {
@@ -45,4 +46,5 @@ class Bedroom extends Room{
   public void puzzle1() {
     if (mouseClicked() 
   }
+  */
 }
