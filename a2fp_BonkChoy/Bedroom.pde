@@ -12,6 +12,8 @@ class Bedroom extends Room{
   PImage note4;
   PImage note5;
   
+  PImage keys;
+  
   public Bedroom() {
     story = "";
     room = "Bedroom";
@@ -27,12 +29,15 @@ class Bedroom extends Room{
     sObj.put("200,400,200,400", "note4");//special with puzzle
     //puzzle.put("Note4"
     sObj.put("200,220,200,220", "note5");//210,210
+    
+    sObj.put("200,220,550,580", "keys");//200,560
   }
   
   public void draw() {
     image(note0, 850, 450);
     image(note1, 600, 380);
     image(note5, 210,210);
+    image(keys, 200,560);
     //rand.display(600,600);
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
@@ -60,6 +65,9 @@ class Bedroom extends Room{
           }
            else if ( currObj.equals("note5") ) {
             image(note5, invX, invY);
+          }
+          else if ( currObj.equals("keys") ) {
+            image(keys, invX, invY);
           }
         }
       }//end else
