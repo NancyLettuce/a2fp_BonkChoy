@@ -14,7 +14,7 @@ class Room {
   protected String story;//storyline
   
   protected String currObj;//object you are clicking on
-  protected String finalPass = "Door";//door leading to next room
+  protected String finalPass = "door";//door leading to next room
   protected String room;//which room you are in
   protected String success;//room you recently passed
   
