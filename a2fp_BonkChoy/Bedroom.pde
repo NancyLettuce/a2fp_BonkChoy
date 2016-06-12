@@ -30,21 +30,4 @@ class Bedroom extends Room{
     }
   }
   
-  /*
-  public void play() {
-    while (pass == false) {
-        if (mouseClicked() && KeyExist?()) {
-          //Add item to inventory }
-        else if (mouseClicked() && //something to identify puzzle) {
-          //run puzzle method
-        }
-    }
-    System.outprintln ("Level Completed")
-    { }
-  }
   
-  public void puzzle1() {
-    if (mouseClicked() 
-  }
-  */
-}
