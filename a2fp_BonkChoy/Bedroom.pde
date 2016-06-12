@@ -2,8 +2,8 @@ import javax.swing.JOptionPane;
 
 class Bedroom extends Room{
 
-  Sprite hi = new Sprite();
-  Animation rand;
+  Cube cube = new Cube();
+  Animation rubik,rubik1;
   
   PImage note0;
   PImage note1;
