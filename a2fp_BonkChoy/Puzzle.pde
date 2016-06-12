@@ -20,6 +20,13 @@ class Puzzle {
       }
     boolean passed = false;
     
+    //displayboard;
+    for (int i = 0; i < 4; i ++) {
+      for (int j = 0; j < 4; j++) {
+        stroke (board[i][j].getColor());
+        }
+      }
+    
     while (passed == false;) {
       if (mouseClicked()) {
         PicPuzzle a = board[mouseX][mouseY];
