@@ -4,7 +4,19 @@ class Kitchen extends Room{
   
   public Kitchen() {
     story = "";
-    pass = false;
+    room = "Kitchen";
+    success = "";
+  }
+  
+  public void draw() {
+    if ( KeyExist() == true ) {
+      if ( isFound(currObj) == true ) {
+        popup(currObj, room);
+      }
+      else {
+        System.out.println("hi");//placeholder
+      }
+    }
   }
    
 }
