@@ -6,6 +6,7 @@ class Living extends Room{
     story = "";
     success = "";
     room = "Living";
+    inventory = new ArrayList<String>();
     inventory.clear();//clears inventory for each level
   }
   
