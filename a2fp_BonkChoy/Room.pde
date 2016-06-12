@@ -30,6 +30,8 @@ class Room {
     else if ( code.get(obj).equals( pass.toLowerCase() ) ) {//if matched key to value
       if ( obj.equals(finalPass) ) {//if you unlocked final door
         success = room;//you passed level
+        pane.showMessageDialog(null, "You've unlocked the door!", "Info", pane.INFORMATION_MESSAGE);
+        return;
       }
       pane.showMessageDialog(null, "Correct Code.", "Info", pane.INFORMATION_MESSAGE);
       pane.getRootFrame().dispose();
