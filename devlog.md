@@ -13,6 +13,6 @@ Nancy Lee, Andrew Lin, Jongyoul Lee
 |  NL         | 6/08     |  Set up basic heirarchy                       |
 |             |          |  Worked on Puzzles                            |
 |  AL         | 6/08     |  puzzles                                      |
-|             |          |                                               |
+|  JL         | 6/11     |  Upload pics of letters                       |
 |             |          |                                               |
 |             |          |                                               |
