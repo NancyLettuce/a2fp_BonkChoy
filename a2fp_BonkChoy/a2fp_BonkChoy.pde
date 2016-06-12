@@ -31,6 +31,9 @@ void setup() {
   bed.note4.resize(0,20);
   bed.note5 = loadImage("Dog.png");
   bed.note5.resize(0,20);
+  
+  bed.keys = loadImage("key.png");
+  bed.keys.resize(0,20);
 }
 
 void draw() {
