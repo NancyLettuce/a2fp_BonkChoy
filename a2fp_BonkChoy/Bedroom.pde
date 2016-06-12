@@ -20,9 +20,23 @@ class Bedroom extends Room{
   
   public void play() {
     while (pass == false) {
-        if (mouseClicked && mouseX == 
+        if (mouseClicked && KeyExist?()) {
+          //Add item to inventory }
+        else if (mouseClicked() && //something to identify puzzle) {
+          //run puzzle method
+        }
     }
+    System.outprintln ("Level Completed")
     { }
   }
    
+  public boolean KeyExist? () {
+    String[] keys = sObj.keySet().toArray();
+    for (int i = 0; i < keys.length; i++) {
+      String[] subKey = keys[i].split(",");
+      if (mouseX < subKey[0] && mouseX > subKey[1] && mouseY < subKey[2] && mouseY > subKey[3])
+        {return true;}
+    }
+    return false;
+  }
 }
