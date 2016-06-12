@@ -19,6 +19,18 @@ void setup() {
   kitchen.resize(0, 600);
   
   bed.rand = new Animation(bed.hi.sprites, 4, 20);//sample sprite
+  bed.note0 = loadImage("Yorkie.png");
+  bed.note0.resize(0,20);
+  bed.note1 = loadImage("Armadillo.png");
+  bed.note1.resize(0,20);
+  bed.note2 = loadImage("Rat.png");
+  bed.note2.resize(0,20);
+  bed.note3 = loadImage("Narwhal.png");
+  bed.note3.resize(0,20);
+  bed.note4 = loadImage("Bat.png");
+  bed.note4.resize(0,20);
+  bed.note5 = loadImage("Dog.png");
+  bed.note5.resize(0,20);
 }
 
 void draw() {
