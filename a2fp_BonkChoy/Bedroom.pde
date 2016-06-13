@@ -32,6 +32,7 @@ class Bedroom extends Room{
     sObj.put("200,220,200,220", "note5");//210,210
     
     sObj.put("200,220,550,580", "keys");//200,560
+    sObj.put("760,810,250,300", "rubik");//780,275
   }
   
   public void draw() {
@@ -68,6 +69,9 @@ class Bedroom extends Room{
           }
           else if ( currObj.equals("keys") ) {
             points.add( new ImageCoordinate(invX, invY, Keys, keys) );
+          }
+          else if ( currObj.equals("rubik") ) {
+            points.add( new ImageCoordinate(invX, invY, rubiks, rubiks) );
           }
         }
       }//end else
