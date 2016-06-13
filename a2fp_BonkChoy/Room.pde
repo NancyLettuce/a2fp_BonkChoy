@@ -93,7 +93,7 @@ class Room {
       invX += 114;
     }
     String coord;
-    coord = (invX-57) + "," + (invX+57) + "," + (invY-40) + "," + (invY+40);
+    coord = invX +","+invY;
     inventory.put(obj, coord);
   }
   
