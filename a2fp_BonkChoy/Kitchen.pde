@@ -9,7 +9,7 @@ public class Kitchen extends Room{
     story = "";
     room = "Kitchen";
     success = "";
-    inventory = new ArrayList<String>();
+    inventory = new HashMap<String,String>();
     inventory.clear();//clears inventory for each level
     //I hope i did this correctly
     code.clear();
