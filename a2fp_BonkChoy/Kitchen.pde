@@ -3,6 +3,7 @@ import javax.swing.JOptionPane;
 class Kitchen extends Room{
   PImage knife,knife1;
   PImage cookedChicked,cooked;
+  PImage grade, grade1;
   
   public Kitchen() {
     story = "";
