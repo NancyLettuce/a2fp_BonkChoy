@@ -1,7 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Kitchen extends Room{
-  
+class Kitchen extends Room{
   PImage knife,knife1;
   PImage cookedChicked,cooked;
   
@@ -11,7 +10,6 @@ public class Kitchen extends Room{
     success = "";
     inventory = new HashMap<String,String>();
     inventory.clear();//clears inventory for each level
-    //I hope i did this correctly
     code.clear();
     sObj.clear();
     points.clear();
@@ -21,18 +19,21 @@ public class Kitchen extends Room{
   
   public void draw() {
     image(knife, 260, 375);
-    image(cookedChicked, 725, 510);
-    
+    image(cookedChicked, 725,510);
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
-        popup(currObj, room);
+        popup(currObj,room);
+        mousePressed= false;
       }
       else {
-        addInventory(currObj);
-        if (inInventory(currObj) == true) {
+        if ( inInventory(currObj) == false) {
+          addInventory(currObj);
         }
-      }//end else
+        if (inInventory(currObj) == true) {
+          mousePressed= false;
+        }
+      }//else
     }//keyExist
   }
-   
+  
 }
