@@ -63,6 +63,13 @@ void setup() {
   tv.paper.resize(0,30);
   tv.paper1 = loadImage("paper.png");
   
+  food.knife = loadImage("knife.png");
+  food.knife.resize(0,30);
+  food.knife1 = loadImage("knife.png");
+  food.cookedChicken = loadImage("cookedChicken");
+  food.cookedChicken.resize(0,50);
+  food.cooked = loadImage("cookedChicken");
+  
   bed.player = new person(50,300);
   bed.g = new end(560, 500);
  
