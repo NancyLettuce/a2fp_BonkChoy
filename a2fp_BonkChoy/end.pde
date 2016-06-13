@@ -1,4 +1,4 @@
-class end{
+public class end{
  
   int x;
   int y;
