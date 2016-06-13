@@ -6,8 +6,12 @@ PImage bedroom;
 PImage kitchen;
 PImage livingroom;
 
+boolean pressed = false;
+
 void setup() {
   size(912,680);
+  starter = loadImage("starter.png");
+  starter.resize(912,680);
   
   bedroom = loadImage("Bedroom.jpg");
   bedroom.resize(912,0);
@@ -93,7 +97,8 @@ void setup() {
 }
 
 void draw() {
-  if (bed.success.equals("")) {//if no levels passed
+  image(starter,0,0);
+  if (pressed) {//if no levels passed
     image(bedroom, 0, 0);
     //rand.display(600,600);
     bed.draw();
@@ -115,4 +120,8 @@ void draw() {
       }
     }//end kitchen
   }
+}
+
+void mousePressed() {
+  pressed = true;
 }
