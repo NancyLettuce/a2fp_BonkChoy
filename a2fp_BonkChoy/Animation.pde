@@ -15,7 +15,7 @@ public class Animation {
     }
   }
 
-  void display(int xpos, int ypos) {
+  public void display(int xpos, int ypos) {
     xcor = xpos;//stores coordinates of sprite
     ycor = ypos;
     frame = (frame+1) % amount;
