@@ -22,3 +22,4 @@ Nancy Lee, Andrew Lin, Jongyoul Lee
 |  AL, NL     | 6/12     |  Added Sprites, updated Kitchen               |
 |  NL         | 6/12     |  Updated Living Room, Bedroom                 |
 |  NL         | 6/12     |  Integrated code from different partners      |
+|  NL         | 6/13     |  Fixed errors                                 |
