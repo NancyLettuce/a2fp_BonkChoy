@@ -20,8 +20,8 @@ class Kitchen extends Room{
   }
   
   public void draw() {
-    image("knife", 260, 375);
-    image("cookedChicked", 725, 510);
+    image(knife, 260, 375);
+    image(cookedChicked, 725, 510);
     
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
