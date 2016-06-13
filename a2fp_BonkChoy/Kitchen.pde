@@ -31,6 +31,13 @@ class Kitchen extends Room{
         }
         if (inInventory(currObj) == true) {
           mousePressed= false;
+          moveInventory(currObj);
+          if ( currObj.equals("knife") ) {
+            points.add( new ImageCoordinate(invX, invY, knife1, knife) );
+          }
+          else if ( currObj.equals("cookedChicked") ) {            
+            points.add( new ImageCoordinate(invX, invY, cooked, cookedChicked) );
+          }  
         }
       }//else
     }//keyExist
