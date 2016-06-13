@@ -33,14 +33,28 @@ void setup() {
   bed.note5 = loadImage("Dog.png");
   bed.note5.resize(0,20);
   
+  bed.Note0 = loadImage("Yorkie.png");
+  bed.Note1= loadImage("Armadillo.png");
+  bed.Note2=loadImage("Rat.png");
+  bed.Note3=loadImage("Narwhal.png");
+  bed.Note4=loadImage("Bat.png");
+  bed.Note5=loadImage("Dog.png");
+  
   bed.keys = loadImage("key.png");
   bed.keys.resize(0,20);
+  
+  bed.Keys = loadImage("key.png");
 }
 
 void draw() {
   if (bed.success.equals("")) {//if no levels passed
     image(bedroom, 0, 0);
     bed.draw();
+    
+    for (ImageCoordinate hi : bed.points) {
+      hi.display();
+    }
+    
     if ( bed.success.equals("Bedroom") ) {//if bedroom passed
       image(livingroom, 0, 0);
       tv.draw();
