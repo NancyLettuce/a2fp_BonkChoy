@@ -2,17 +2,19 @@ import java.io.*;
 import java.util.*;
 import javax.swing.JOptionPane;
 
-public class Room {
+class Room {
   
   //key written as "x,x1,y,y1"
   protected Map<String, String> sObj = new HashMap<String, String>();//coord , special obj
   protected Map<String, String> code = new HashMap<String, String>();//special obj , required password
   //protected Map<Puzzle, String> puzzles = new HashMap<Puzzle, String>(); //HashMap for puzzle storage
+  
   protected Map<String, String> inventory = new HashMap<String, String>();//special obj, coord
-   
-  protected String story;//storyline
+  
   protected ArrayList<ImageCoordinate> points= new ArrayList<ImageCoordinate>();
-    
+  
+  protected String story;//storyline
+  
   protected String currObj;//object you are clicking on
   protected String finalPass = "door";//door leading to next room
   protected String room;//which room you are in
@@ -21,7 +23,10 @@ public class Room {
   protected int invX;//coordinates for object moved into inventory
   protected int invY;
   
+  //Animation rand;
+  
   void draw() {
+    //rand = new Animation(hi.sprites, 4, 20);
     rect(20,30,100,100);
   }
   
@@ -55,7 +60,7 @@ public class Room {
     }
   }
   
-    //when something is unlocked
+  //whne something is unlocked
   public void unlock(String obj) {
     JOptionPane pane= new JOptionPane("message", JOptionPane.YES_NO_OPTION);
     pane.showMessageDialog(null, story);
@@ -67,15 +72,15 @@ public class Room {
     pane.getRootFrame().setVisible(false);
   }
   
-    //popup asking whether or not to add to inventory
+  //popup asking whether or not to add to inventory
   public Map<String,String> addInventory(String obj) {
-    inventory = new ArrayList<String>();
+    //inventory = new ArrayList<String>();
     JOptionPane pane= new JOptionPane("message", JOptionPane.YES_NO_OPTION);
     final int choose = pane.showConfirmDialog(null, "Do you want to add " + obj + " to the inventory?");
     if (choose == pane.YES_OPTION){
       String rem = getKeyFromVal(sObj, obj);//coords of special obj
       inventory.put(obj, rem);//puts obj into inventory
-      sObj.remove( rem );//removes it from sObj
+      sObj.remove( rem );//removes obj from sObj
       pane.getRootFrame().setVisible(false);
       return inventory;
     }
@@ -85,7 +90,16 @@ public class Room {
     }    
   }
   
-    //changes coordinates of obj to inventory
+  public String getKeyFromVal( Map<String,String> map, String val) {
+    for ( String s : map.keySet() ) {
+      if ( map.get(s).equals(val)) {
+        return s;
+      }
+    }
+    return null;
+  }
+  
+  //changes coordinates of sprite to inventory
   public void moveInventory(String obj) {
     invX = 57;
     invY= 600;
@@ -93,11 +107,11 @@ public class Room {
       invX += 114;
     }
     String coord;
-    coord = invX +","+invY;
+    coord = invX+","+invY;
     inventory.put(obj, coord);
   }
+
   
-    
   //is this object in the iventory???
   public boolean inInventory(String obj) {
     for (String x : inventory.keySet()) {
@@ -106,15 +120,6 @@ public class Room {
       }
     }
     return false;
-  }
-  
-  public String getKeyFromVal( Map<String,String> map, String val) {
-    for ( String s : map.keySet() ) {
-      if ( map.get(s).equals(val)) {
-        return s;
-      }
-    }
-    return null;
   }
   
   //Is the object you clicked on protected by code????
@@ -155,4 +160,5 @@ public class Room {
     }
     return false;
   }
+  
 }
