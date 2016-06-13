@@ -1,7 +1,7 @@
 public class Animation {
   PImage[] sprites;
   int amount;
-  int frame;
+  int frame = 20;
   
   int xcor;//store coord of sprite
   int ycor;
@@ -15,7 +15,7 @@ public class Animation {
     }
   }
 
-  public void display(int xpos, int ypos) {
+  void display(int xpos, int ypos) {
     xcor = xpos;//stores coordinates of sprite
     ycor = ypos;
     frame = (frame+1) % amount;
