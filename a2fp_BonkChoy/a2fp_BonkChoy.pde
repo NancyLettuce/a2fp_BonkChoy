@@ -12,38 +12,40 @@ void setup() {
   bedroom = loadImage("bedroom.jpg");
   bedroom.resize(912,0);
  
-  livingroom = loadImage("bedroom.jpg");//placeholder
+  livingroom = loadImage("livingroom.jpg");//placeholder
   livingroom.resize(912,0);
   
-  kitchen = loadImage("bedroom.jpg");//placeholder
+  kitchen = loadImage("kitchen.jpg");//placeholder
   kitchen.resize(912,0);
   
-  bed.rubik = new Animation(bed.cube.sprites, 3, 20);
+  bed.bedr = loadImage("bedroom.jpg");
+  bed.bedr.resize(912,0);
+  
+  bed.rubik = new Animation(bed.cube.sprites, 3, 50);
   bed.rubiks = loadImage(bed.cube.sprites[0]);
   
-  bed.note0 = loadImage("Yorkie.png");
-  bed.note0.resize(0,20);
-  bed.note1 = loadImage("Armadillo.png");
-  bed.note1.resize(0,20);
-  bed.note2 = loadImage("Rat.png");
-  bed.note2.resize(0,20);
-  bed.note3 = loadImage("Narwhal.png");
-  bed.note3.resize(0,20);
-  bed.note4 = loadImage("Bat.png");
-  bed.note4.resize(0,20);
-  bed.note5 = loadImage("Dog.png");
-  bed.note5.resize(0,20);
+  bed.note0 = loadImage("Yorkie.png"); 
+  bed.note0.resize(0,20); 
+  bed.note1 = loadImage("Armadillo.png"); 
+  bed.note1.resize(0,20); 
+  bed.note2 = loadImage("Rat.png"); 
+  bed.note2.resize(0,20); 
+  bed.note3 = loadImage("Narwhal.png"); 
+  bed.note3.resize(0,20); 
+  bed.note4 = loadImage("Bat.png"); 
+  bed.note4.resize(0,20); 
+  bed.note5 = loadImage("Dog.png"); 
+  bed.note5.resize(0,20); 
   
   bed.Note0 = loadImage("Yorkie.png");
   bed.Note1= loadImage("Armadillo.png");
   bed.Note2=loadImage("Rat.png");
   bed.Note3=loadImage("Narwhal.png");
   bed.Note4=loadImage("Bat.png");
-  bed.Note5=loadImage("Dog.png");
+  bed.Note5=loadImage("Dog.png"); 
   
   bed.keys = loadImage("key.png");
-  bed.keys.resize(0,20);
-  
+  bed.keys.resize(0,20); 
   bed.Keys = loadImage("key.png");
   
   tv.keys = loadImage("key.png");
@@ -103,7 +105,6 @@ void draw() {
       hi.display();
     }
     if ( tv.success.equals("Living") ) {//if living room passed
-      System.out.println("please");
       image(kitchen, 0, 0);
       food.draw();
     }//end kitchen
