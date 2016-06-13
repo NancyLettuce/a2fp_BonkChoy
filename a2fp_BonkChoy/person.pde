@@ -55,7 +55,9 @@ class person {
       y = possibleY;
     }
     
-    if (x == a.x && y == a.y) {completed = true; }
+    if (x == a.x && y == a.y) {
+     completed = true; 
+    }
     
   }
   
