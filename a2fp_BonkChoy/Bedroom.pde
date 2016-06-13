@@ -35,11 +35,13 @@ class Bedroom extends Room{
   }
   
   public void draw() {
+    rubik.display(780,275);
     image(note0, 850, 450);
     image(note1, 600, 380);
     image(note5, 210,210);
     image(keys, 200,560);
-    //rand.display(600,600);
+    
+    //chest section
     if (mousePressed) {
       if (mouseX > 580 && mouseX < 600 && mouseY > 150 && mouseY < 200) {
         if ( inInventory("keys") ) {
@@ -48,12 +50,16 @@ class Bedroom extends Room{
         }
       }//coord
     }//mousepress
+    
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
         popup(currObj, room);
+        mousePressed= false;
       }
       else {
-        addInventory(currObj);
+        if ( inInventory(currObj) == false) {
+          addInventory(currObj);
+        }
         if (inInventory(currObj) == true) {
           moveInventory();
           mousePressed = false;
