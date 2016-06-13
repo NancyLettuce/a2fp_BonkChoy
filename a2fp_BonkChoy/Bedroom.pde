@@ -113,7 +113,7 @@ class Bedroom extends Room{
           }
         }
       }//end else
-    }keyExist
+    }//keyExist
   }
   
   public void redraw() {
