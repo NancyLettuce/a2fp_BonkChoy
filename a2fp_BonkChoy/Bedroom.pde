@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-class Bedroom extends Room{
+public class Bedroom extends Room{
 
   person player;
   wall[] walls; 
