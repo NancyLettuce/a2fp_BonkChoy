@@ -46,7 +46,7 @@ class Bedroom extends Room{
       if (mouseX > 580 && mouseX < 600 && mouseY > 150 && mouseY < 200) {
         if ( inInventory("keys") ) {
           sObj.put("580,600,150,200", "note3");
-          unlock();
+          unlock(currObj);
         }
       }//coord
     }//mousepress
@@ -61,7 +61,7 @@ class Bedroom extends Room{
           addInventory(currObj);
         }
         if (inInventory(currObj) == true) {
-          moveInventory();
+          moveInventory(currObj);
           mousePressed = false;
           if ( currObj.equals("note0") ) {
             points.add( new ImageCoordinate(invX, invY, Note0, note0) );
