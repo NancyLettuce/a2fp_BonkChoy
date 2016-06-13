@@ -9,16 +9,16 @@ PImage livingroom;
 void setup() {
   size(912,680);
   
-  bedroom = loadImage("bedroom.jpg");
+  bedroom = loadImage("Bedroom.jpg");
   bedroom.resize(912,0);
  
-  livingroom = loadImage("livingroom.jpg");//placeholder
+  livingroom = loadImage("LIVINGROOM.jpg");//placeholder
   livingroom.resize(912,0);
   
-  kitchen = loadImage("kitchen.jpg");//placeholder
+  kitchen = loadImage("Kitchen.jpg");//placeholder
   kitchen.resize(912,0);
   
-  bed.bedr = loadImage("bedroom.jpg");
+  bed.bedr = loadImage("Bedroom.jpg");
   bed.bedr.resize(912,0);
   
   bed.rubik = new Animation(bed.cube.sprites, 3, 50);
