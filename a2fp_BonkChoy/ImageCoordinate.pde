@@ -1,4 +1,4 @@
-class ImageCoordinate {
+public class ImageCoordinate {
   int x, y, transparency;
   PImage img;
   PImage old;
