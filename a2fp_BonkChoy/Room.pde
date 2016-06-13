@@ -11,7 +11,8 @@ class Room {
   protected Map<String, String> inventory = new HashMap<String, String>();//special obj, coord
    
   protected String story;//storyline
-  
+  protected ArrayList<ImageCoordinate> points= new ArrayList<ImageCoordinate>();
+    
   protected String currObj;//object you are clicking on
   protected String finalPass = "door";//door leading to next room
   protected String room;//which room you are in
@@ -50,6 +51,13 @@ class Room {
     else {//when press cancel
       pane.getRootFrame().setVisible(false);
     }
+  }
+  
+    //whne something is unlocked
+  public void unlock() {
+    JOptionPane pane= new JOptionPane("message", JOptionPane.YES_NO_OPTION);
+    pane.showMessageDialog(null, "You have unlocked the box with your key!", "Info", pane.INFORMATION_MESSAGE);
+    pane.getRootFrame().setVisible(false);
   }
   
     //popup asking whether or not to add to inventory
