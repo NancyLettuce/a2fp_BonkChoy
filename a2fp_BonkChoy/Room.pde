@@ -25,24 +25,26 @@ class Room {
     rect(20,30,100,100);
   }
   
-   //popup for entering codes
+  //popup for entering codes
   public void popup(String obj, String room) {
     JOptionPane pane= new JOptionPane("message", JOptionPane.OK_CANCEL_OPTION);
-    final String pass = pane.showInputDialog("Please enter the correct code.");
+    final String pass = pane.showInputDialog(story);
     if (pass == null) {
       pane.getRootFrame().setVisible(false); 
     }
     else if ("".equals(pass)) {//if nothing entered
       pane.getRootFrame().setVisible(false);
     }
+    
     else if ( code.get(obj).equals( pass.toLowerCase() ) ) {//if matched key to value
       if ( obj.equals(finalPass) ) {//if you unlocked final door
         success = room;//you passed level
         pane.showMessageDialog(null, "You've unlocked the door!", "Info", pane.INFORMATION_MESSAGE);
         return;
       }
+      success = "yay";
       pane.showMessageDialog(null, "Correct Code.", "Info", pane.INFORMATION_MESSAGE);
-      pane.getRootFrame().dispose();
+      pane.getRootFrame().setVisible(false);
     }
     else if ( code.get(obj).equals( pass.toLowerCase()) == false) {//entered wrong code
       pane.showMessageDialog(null, "Incorrect Code.", "Info", pane.INFORMATION_MESSAGE);
@@ -53,10 +55,15 @@ class Room {
     }
   }
   
-    //whne something is unlocked
-  public void unlock() {
+    //when something is unlocked
+  public void unlock(String obj) {
     JOptionPane pane= new JOptionPane("message", JOptionPane.YES_NO_OPTION);
-    pane.showMessageDialog(null, "You have unlocked the box with your key!", "Info", pane.INFORMATION_MESSAGE);
+    pane.showMessageDialog(null, story);
+    if ( obj.equals(finalPass) ) {//if you unlocked final door
+      success = room;//you passed level
+      pane.showMessageDialog(null, "You've unlocked the door!", "Info", pane.INFORMATION_MESSAGE);
+      return;
+    }
     pane.getRootFrame().setVisible(false);
   }
   
@@ -81,7 +88,7 @@ class Room {
     //changes coordinates of obj to inventory
   public void moveInventory(String obj) {
     invX = 57;
-    invY= 640;
+    invY= 600;
     for (int c = 1; c < inventory.size(); c ++) {
       invX += 114;
     }
