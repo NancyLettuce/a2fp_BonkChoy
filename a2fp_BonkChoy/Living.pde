@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Living extends Room{
+class Living extends Room{
   
   PImage keys,Keys;
   PImage ax,ax1;
