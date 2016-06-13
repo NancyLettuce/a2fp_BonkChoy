@@ -6,6 +6,8 @@ PImage bedroom;
 PImage kitchen;
 PImage livingroom;
 
+PImage starter;
+
 boolean pressed = false;
 
 void setup() {
