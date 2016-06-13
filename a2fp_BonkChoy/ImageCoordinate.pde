@@ -10,7 +10,7 @@ public class ImageCoordinate {
     this.old = old;
   }
 
-  when you hover over the coordinate, a larger version of the image pops up
+  
   public void display() {
     image(old, x, y);
     if (dist(mouseX, mouseY, x, y) < 15) {
