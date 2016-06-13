@@ -1,11 +1,15 @@
-class ball {
+class person {
  
-  float x;
-  float y;
- 
-  ball(float _x, float _y){
+  int x;
+  int y;
+  int start_x;
+  int start_y;
+  
+  person(int _x, int _y){
     x = _x;
     y = _y;
+    start_x = _x;
+    start_y = _y;
   }
  
   void draw(){
@@ -13,14 +17,14 @@ class ball {
     ellipse(x,y,25,25);
   }
  
-  void move(wall[] walls){
+  void move(wall[] walls , Moving_Blocks[] blocks){
  
-    float possibleX = x;
-    float possibleY = y;
+    int possibleX = x;
+    int possibleY = y;
  
     if (keyPressed==true) {
  
-      println(key);
+      //println(key);
  
       if (key=='a') { 
         possibleX= possibleX - 5;
@@ -40,14 +44,24 @@ class ball {
     for(int i = 0; i < walls.length; i++){
       if(possibleX > walls[i].x && possibleX < (walls[i].x + walls[i].w) && possibleY > walls[i].y && possibleY < walls[i].y + walls[i].h){
         didCollide = true;
+        x = start_x;
+        y = start_y;
       }
     }
+    
+    
+    for(int i = 0; i < blocks.length; i++){
+      if(possibleX > blocks[i].x && possibleX < (blocks[i].x + blocks[i].w) && possibleY > blocks[i].y && possibleY < blocks[i].y + blocks[i].h){
+        didCollide = true;
+        x = start_x;
+        y = start_y;
+      }
+    } 
  
     if(didCollide == false){
       x = possibleX;
       y = possibleY;
-    }
- 
+    } 
   }
- 
-}
+  
+}  
