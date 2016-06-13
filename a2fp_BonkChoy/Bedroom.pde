@@ -41,6 +41,13 @@ class Bedroom extends Room{
     image(note5, 210,210);
     image(keys, 200,560);
     //rand.display(600,600);
+    if (mousePressed) {
+      if (mouseX > 580 && mouseX < 600 && mouseY > 150 && mouseY < 200) {
+        if ( inInventory("keys") ) {
+          unlock();
+        }
+      }
+    }//mousepress
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
         popup(currObj, room);
