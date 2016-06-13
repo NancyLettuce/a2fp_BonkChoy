@@ -15,4 +15,4 @@ Nancy Lee, Andrew Lin, Jongyoul Lee
 |  AL         | 6/08     |  puzzles                                      |
 |  JL         | 6/11     |  Upload pics of letters                       |
 |  JL         | 6/12     |  Draw sprites                                 |
-|             |          |                                               |
+|  AL         | 6/12     |  Created Maze puzzle                          |
