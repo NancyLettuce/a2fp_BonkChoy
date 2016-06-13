@@ -19,6 +19,7 @@ void setup() {
   kitchen.resize(0, 600);
   
   bed.rubik = new Animation(bed.cube.sprites, 3, 20);
+  bed.rubiks = loadImage(bed.cube.sprites[0]);
   
   bed.note0 = loadImage("Yorkie.png");
   bed.note0.resize(0,20);
