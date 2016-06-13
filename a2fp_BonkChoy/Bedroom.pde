@@ -57,7 +57,6 @@ class Bedroom extends Room{
     }//mousepress
     
     if (mouseX > 300 && mouseX < 400 && mouseY > 300 && mouseY < 400) {
-      puzzle = true;
       background(#E25E75); 
       noStroke(); 
        
@@ -72,7 +71,7 @@ class Bedroom extends Room{
         
       if (player.completed == true) {
         sObj.put("300,400,300,400", "note4");
-        puzzle = false;
+        redraw();
       }
     }//puzzle
     
@@ -115,6 +114,99 @@ class Bedroom extends Room{
         }
       }//end else
     }keyExist
+  }
+  
+  public void redraw() {
+    int x; int y;
+    image(bedr, 0, 0);
+    rubik.display(780,275); 
+    image(note0, 850, 450);
+    image(note1, 600, 380);
+    image(note5, 210,210);
+    image(keys, 200,560);
+    
+    for (String s: inventory.keySet()) {
+      String coord = inventory.get(s);
+      String[] subKey =  coord.split(",");
+      x = Integer.parseInt(subKey[0]);
+      y = Integer.parseInt(subKey[1]);
+      if (s.equals("note0")) {
+        points.add( new ImageCoordinate(x, y, Note0, note0) );
+      }
+      else if (s.equals("note1")) {
+        points.add( new ImageCoordinate(x, y, Note1, note1) );
+      }
+      else if (s.equals("note2")) {
+        points.add( new ImageCoordinate(x, y, Note2, note2) );
+      }
+      else if (s.equals("note3")) {
+        points.add( new ImageCoordinate(x, y, Note3, note3) );
+      }
+      else if (s.equals("note4")) {
+        points.add( new ImageCoordinate(x, y, Note4, note4) );
+      }
+      else if (s.equals("note5")) {
+        points.add( new ImageCoordinate(x, y, Note5, note5) );
+      }
+      else if (s.equals("keys")) {
+        points.add( new ImageCoordinate(x, y, Keys, keys) );
+      }
+    }
+
+      
+      if (mousePressed) {
+        System.out.println("kms");
+        if (mouseX > 580 && mouseX < 600 && mouseY > 150 && mouseY < 200) {
+          if ( inInventory("keys") ) {
+            story = "You have unlocked the box!";
+            sObj.put("580,600,150,200", "note3");
+            unlock(currObj);
+          }
+        }//coord
+  
+      }//mousepress
+      
+       if ( KeyExist() == true) {
+        if ( isFound(currObj) == true) {//code needed
+          story = "Enter the correct code.";
+          popup(currObj, room);
+          mousePressed= false;
+        }
+        else {
+          if ( inInventory(currObj) == false) {
+            addInventory(currObj);
+          }
+          if (inInventory(currObj) == true) {
+            moveInventory(currObj);
+            mousePressed = false;
+            if ( currObj.equals("note0") ) {
+              points.add( new ImageCoordinate(invX, invY, Note0, note0) );
+            }
+            else if ( currObj.equals("note1") ) {            
+              points.add( new ImageCoordinate(invX, invY, Note1, note1) );
+            }
+            else if ( currObj.equals("note2") ) {
+              points.add( new ImageCoordinate(invX, invY, Note2, note2) );
+            }
+            else if ( currObj.equals("note3") ) {
+              points.add( new ImageCoordinate(invX, invY, Note3, note3) );
+            }
+            else if ( currObj.equals("note4") ) {
+              points.add( new ImageCoordinate(invX, invY, Note4, note4) );
+            }
+            else if ( currObj.equals("note5") ) {
+              points.add( new ImageCoordinate(invX, invY, Note5, note5) );
+            }
+            else if ( currObj.equals("keys") ) {
+              points.add( new ImageCoordinate(invX, invY, Keys, keys) );
+            }
+            else if ( currObj.equals("rubik") ) {
+              points.add( new ImageCoordinate(invX, invY, rubiks, rubiks) );
+            }
+          }
+        }//end else
+      }//keyExist
+
   }
   
   
