@@ -1,15 +1,18 @@
 class ImageCoordinate {
   int x, y, transparency;
   PImage img;
+  PImage old;
  
-  ImageCoordinate(int x, int y, PImage img) {
+  ImageCoordinate(int x, int y, PImage img, PImage old) {
     this.x = x;
     this.y = y;
     this.img = img;
+    this.old = old;
   }
 
   when you hover over the coordinate, a larger version of the image pops up
   void display() {
+    image(old, x, y);
     if (dist(mouseX, mouseY, x, y) < 15) {
       ellipse(x, y, 10, 10);
       rect(x-1, y-1, img.width+2, img.height+2);
