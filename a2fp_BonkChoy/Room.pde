@@ -2,12 +2,12 @@ import java.io.*;
 import java.util.*;
 import javax.swing.JOptionPane;
 
-class Room {
+public class Room {
   
   //key written as "x,x1,y,y1"
   protected Map<String, String> sObj = new HashMap<String, String>();//coord , special obj
   protected Map<String, String> code = new HashMap<String, String>();//special obj , required password
-  protected Map<Puzzle, String> puzzles = new HashMap<Puzzle, String>(); //HashMap for puzzle storage
+  //protected Map<Puzzle, String> puzzles = new HashMap<Puzzle, String>(); //HashMap for puzzle storage
   protected Map<String, String> inventory = new HashMap<String, String>();//special obj, coord
    
   protected String story;//storyline
