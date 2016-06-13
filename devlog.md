@@ -16,3 +16,5 @@ Nancy Lee, Andrew Lin, Jongyoul Lee
 |  JL         | 6/11     |  Upload pics of letters                       |
 |  JL         | 6/12     |  Draw sprites                                 |
 |  AL         | 6/12     |  Created Maze puzzle                          |
+|  AL, NL     | 6/12     |  Added Sprites, updated Kitchen               |
+|  NL         | 6/12     |  Updated Living Room, Bedroom                 |
