@@ -13,12 +13,12 @@ public class person {
     start_y = _y;
   }
  
-  void draw(){
+  public void draw(){
     fill(128);
     ellipse(x,y,25,25);
   }
  
-  void move(wall[] walls, end a){
+  public void move(wall[] walls, end a){
  
     int possibleX = x;
     int possibleY = y;
