@@ -1,11 +1,11 @@
-ball player;
+person player;
 wall[] walls; 
  
 void setup() {
  
   size(750, 750);
  
-  player = new ball(50,300);
+  player = new person(50,300);
  
   walls = new wall[3];
   walls[0] = new wall(250,0,40,500);
