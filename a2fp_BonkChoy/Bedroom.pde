@@ -2,6 +2,11 @@ import javax.swing.JOptionPane;
 
 class Bedroom extends Room{
 
+  person player;
+  wall[] walls; 
+  end g;
+  
+
   Cube cube = new Cube();
   Animation rubik;
   PImage rubiks;
@@ -50,6 +55,26 @@ class Bedroom extends Room{
         }
       }//coord
     }//mousepress
+    
+    if (mouseX > 300 && mouseX < 400 && mouseY > 300 && mouseY < 400) {
+      puzzle = true;
+      background(#E25E75); 
+      noStroke(); 
+       
+      player.draw();
+      g.draw(); 
+        
+      player.move(walls, g);
+       
+      for(int i = 0; i < walls.length; i++){
+        walls[i].draw();
+      }
+        
+      if (player.completed == true) {
+        sObj.put("300,400,300,400", "note4");
+        puzzle = false;
+      }
+    }//puzzle
     
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
