@@ -1,4 +1,4 @@
-class person {
+public class person {
  
   int x;
   int y;
@@ -6,7 +6,7 @@ class person {
   int start_y;
   boolean completed = false;
   
-  person(int _x, int _y){
+  public person(int _x, int _y){
     x = _x;
     y = _y;
     start_x = _x;
