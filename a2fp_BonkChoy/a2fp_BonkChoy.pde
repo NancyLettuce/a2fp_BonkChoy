@@ -108,7 +108,7 @@ void draw() {
       hi.display();
     }
   }//end bed
-  else if ( bed.success.equals("Bedroom") ) {//if bedroom passed
+  if ( bed.success.equals("Bedroom") ) {//if bedroom passed
     image(livingroom, 0, 0);
     tv.draw();
     for (ImageCoordinate hi : tv.points) {
