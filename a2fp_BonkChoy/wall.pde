@@ -1,4 +1,4 @@
-class wall {
+public class wall {
  
   float x;
   float y;
