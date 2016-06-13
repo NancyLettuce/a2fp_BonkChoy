@@ -3,7 +3,8 @@ import javax.swing.JOptionPane;
 class Bedroom extends Room{
 
   Cube cube = new Cube();
-  Animation rubik,rubik1;
+  Animation rubik;
+  PImage rubiks;
   
   PImage note0,Note0;
   PImage note1,Note1;
@@ -48,32 +49,25 @@ class Bedroom extends Room{
         if (inInventory(currObj) == true) {
           moveInventory();
           if ( currObj.equals("note0") ) {
-            points.add( new ImageCoordinate(invX, invY, Note0) );
-            image(note0, invX, invY);
+            points.add( new ImageCoordinate(invX, invY, Note0, note0) );
           }
           else if ( currObj.equals("note1") ) {
-            points.add( new ImageCoordinate(invX, invY, Note1) );
-            image(note1, invX, invY);
+            points.add( new ImageCoordinate(invX, invY, Note1, note1) );
           }
           else if ( currObj.equals("note2") ) {
-            points.add( new ImageCoordinate(invX, invY, Note2) );
-            image(note2, invX, invY);
+            points.add( new ImageCoordinate(invX, invY, Note2, note2) );
           }
           else if ( currObj.equals("note3") ) {
-            points.add( new ImageCoordinate(invX, invY, Note3) );
-            image(note3, invX, invY);
+            points.add( new ImageCoordinate(invX, invY, Note3, note3) );
           }
           else if ( currObj.equals("note4") ) {
-            points.add( new ImageCoordinate(invX, invY, Note4) );
-            image(note4, invX, invY);
+            points.add( new ImageCoordinate(invX, invY, Note4, note4) );
           }
            else if ( currObj.equals("note5") ) {
-            points.add( new ImageCoordinate(invX, invY, Note5) );
-            image(note5, invX, invY);
+            points.add( new ImageCoordinate(invX, invY, Note5, note5) );
           }
           else if ( currObj.equals("keys") ) {
-            points.add( new ImageCoordinate(invX, invY, Keys) );
-            image(keys, invX, invY);
+            points.add( new ImageCoordinate(invX, invY, Keys, keys) );
           }
         }
       }//end else
