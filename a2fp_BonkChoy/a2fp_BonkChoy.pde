@@ -110,6 +110,9 @@ void draw() {
     if ( tv.success.equals("Living") ) {//if living room passed
       image(kitchen, 0, 0);
       food.draw();
+      for (ImageCoordinate hi : food.points) {
+        hi.display();
+      }
     }//end kitchen
   }
 }
