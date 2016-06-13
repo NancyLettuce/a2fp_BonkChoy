@@ -15,8 +15,8 @@ class Kitchen extends Room{
     code.clear();
     sObj.clear();
     points.clear();
-    sObj.put("240, 300, 350, 400", "knife");
-    sObj.put("700, 750, 490, 530", "cookedChicked");
+    sObj.put("240,300,350,400", "knife");
+    sObj.put("700,750,490,530", "cookedChicked");
   }
   
   public void draw() {
