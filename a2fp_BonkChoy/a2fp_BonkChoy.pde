@@ -62,6 +62,22 @@ void setup() {
   tv.paper = loadImage("paper.png");
   tv.paper.resize(0,30);
   tv.paper1 = loadImage("paper.png");
+  
+  bed.player = new person(50,300);
+  bed.g = new end(560, 500);
+ 
+  bed.walls = new wall[11];
+  bed.walls[0] = new wall(250,0,40,500);
+  bed.walls[1] = new wall(500, 250,40,500);
+  bed.walls[2] = new wall(80, 0, 20, 190);
+  bed.walls[3] = new wall(80, 200, 20, 500);
+  bed.walls[4] = new wall(120, 0, 20, 200);
+  bed.walls[5] = new wall(120, 250, 20, 300);
+  bed.walls[6] = new wall(120, 560, 20, 300);
+  bed.walls[7] = new wall(140, 300, 348, 20);
+  bed.walls[8] = new wall(140, 400, 345, 20);
+  bed.walls[9] = new wall(140, 500, 340, 20);
+  bed.walls[10] = new wall(140, 600, 380, 20);
 }
 
 void draw() {
