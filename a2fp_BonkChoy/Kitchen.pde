@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-class Kitchen extends Room{
+public class Kitchen extends Room{
   
   PImage knife,knife1;
   PImage cookedChicked,cooked;
