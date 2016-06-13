@@ -24,4 +24,5 @@ void draw() {
   for(int i = 0; i < walls.length; i++){
     walls[i].draw();
   }
- 
+  
+}
