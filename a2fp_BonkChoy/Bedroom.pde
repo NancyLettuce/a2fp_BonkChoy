@@ -13,7 +13,7 @@ class Bedroom extends Room{
   PImage note4,Note4;
   PImage note5,Note5;
   
-   PImage keys,Keys;
+  PImage keys,Keys;
   
   public Bedroom() {
     story = "";
@@ -26,7 +26,6 @@ class Bedroom extends Room{
     sObj.put("840,860,440,460", "note0");//890,400
     sObj.put("590,610,370,390", "note1");//600,380
     sObj.put("400,450,250,290", "note2");//hidden under covers 410,260
-    sObj.put("200,400,200,400", "note3");//IN A CHEST with key
     sObj.put("200,400,200,400", "note4");//special with puzzle
     //puzzle.put("Note4"
     sObj.put("200,220,200,220", "note5");//210,210
@@ -44,9 +43,10 @@ class Bedroom extends Room{
     if (mousePressed) {
       if (mouseX > 580 && mouseX < 600 && mouseY > 150 && mouseY < 200) {
         if ( inInventory("keys") ) {
+          sObj.put("580,600,150,200", "note3");
           unlock();
         }
-      }
+      }//coord
     }//mousepress
     if ( KeyExist() == true ) {
       if ( isFound(currObj) == true ) {
