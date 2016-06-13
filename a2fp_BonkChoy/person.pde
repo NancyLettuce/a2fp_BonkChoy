@@ -4,6 +4,7 @@ class person {
   int y;
   int start_x;
   int start_y;
+  boolean completed = false;
   
   person(int _x, int _y){
     x = _x;
@@ -17,7 +18,7 @@ class person {
     ellipse(x,y,25,25);
   }
  
-  void move(wall[] walls , Moving_Blocks[] blocks){
+  void move(wall[] walls, end a){
  
     int possibleX = x;
     int possibleY = y;
@@ -48,20 +49,14 @@ class person {
         y = start_y;
       }
     }
-    
-    
-    for(int i = 0; i < blocks.length; i++){
-      if(possibleX > blocks[i].x && possibleX < (blocks[i].x + blocks[i].w) && possibleY > blocks[i].y && possibleY < blocks[i].y + blocks[i].h){
-        didCollide = true;
-        x = start_x;
-        y = start_y;
-      }
-    } 
  
     if(didCollide == false){
       x = possibleX;
       y = possibleY;
-    } 
+    }
+    
+    if (x == a.x && y == a.y) {completed = true;}
+    
   }
   
-}  
+}
